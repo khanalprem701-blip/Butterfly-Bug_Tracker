@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Development Team Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="security-banner">
+        AUTHORIZED DEVELOPMENT TEAM ACCESS ONLY — ALL ACTIVITY IS LOGGED
+    </div>
+
+    <div class="centered">
+        <div class="login-card">
+            <h2>Development Team Login</h2>
+            <p class="subtitle">Access the bug tracking dashboard</p>
+
+            <form id="loginForm" onsubmit="event.preventDefault(); login();">
+                <input id="username" placeholder="Username" autocomplete="off">
+                <input id="password" type="password" placeholder="Password" autocomplete="off">
+
+                <select id="role">
+                    <option value="Developer">Developer</option>
+                    <option value="Tester">Tester</option>
+                    <option value="Manager">Manager</option>
+                </select>
+
+                <p id="captchaText" class="captcha-text"></p>
+                <input id="captcha" placeholder="Enter CAPTCHA answer">
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p id="msg" class="error-msg"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

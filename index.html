@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Track The Bug – Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="security-banner">
+        AUTHORIZED DEVELOPMENT TEAM ACCESS ONLY — ALL ACTIVITY IS LOGGED
+    </div>
+
+    <div id="app">
+
+        <header>
+            <div>
+                <h1>Track the Bug</h1>
+                <p class="tagline">Fix. Evolve. Repeat.</p>
+            </div>
+
+            <div id="currentUser"></div>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </header>
+
+        <main>
+            <div class="panel">
+                <h2>Create Bug</h2>
+                <input id="bugTitle" placeholder="Bug Title">
+                <textarea id="bugDescription" placeholder="Bug Description"></textarea>
+
+                <div class="row">
+                    <select id="bugPriority">
+                        <option>Low</option>
+                        <option>Medium</option>
+                        <option>High</option>
+                    </select>
+
+                    <select id="bugSeverity">
+                        <option>Minor</option>
+                        <option>Major</option>
+                        <option>Critical</option>
+                    </select>
+                </div>
+
+                <button onclick="addBug()">Add Bug</button>
+            </div>
+
+            <div class="panel">
+                <h2>Bug List</h2>
+                <div id="bugList"></div>
+            </div>
+
+            <div class="panel">
+                <h2>Dashboard</h2>
+
+                <p>Total Bugs: <span id="totalBugs">0</span></p>
+                <p>Open Bugs: <span id="openBugs">0</span></p>
+                <p>Resolved Bugs: <span id="resolvedBugs">0</span></p>
+
+                <h3>Priority</h3>
+                <p>Low: <span id="lowPriority">0</span></p>
+                <p>Medium: <span id="mediumPriority">0</span></p>
+                <p>High: <span id="highPriority">0</span></p>
+
+                <h3>Severity</h3>
+                <p>Minor: <span id="minorSeverity">0</span></p>
+                <p>Major: <span id="majorSeverity">0</span></p>
+                <p>Critical: <span id="criticalSeverity">0</span></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
